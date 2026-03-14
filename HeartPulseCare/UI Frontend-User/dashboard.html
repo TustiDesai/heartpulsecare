@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard | HeartPulseCare</title>
+
+  <!-- ICONS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-heart-pulse"></i>
+      <span>HeartPulseCare</span>
+    </div>
+
+    <nav class="menu">
+      <a class="active"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+      <a href="diet.html"><i class="fa-solid fa-apple-whole"></i><span>My Diet</span></a>
+      <a href="exercise.html"><i class="fa-solid fa-dumbbell"></i><span>My Exercise</span></a>
+      <a href="appointment.html"><i class="fa-solid fa-calendar-check"></i><span>Appointments</span></a>
+      <a href="hospitals.html"><i class="fa-solid fa-hospital"></i><span>Hospitals</span></a>
+      <a href="quiz.html"><i class="fa-solid fa-file-circle-check"></i><span>Quiz</span></a>
+      <a href="feedback.html"><i class="fa-solid fa-comment-dots"></i><span>Feedback</span></a>
+      <a href="support.html"><i class="fa-solid fa-gear"></i><span>Support</span></a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <span class="welcome">Welcome, User</span>
+    </header>
+
+    <!-- CARDS -->
+    <section class="cards">
+
+      <div class="card">
+        <h4><i class="fa-solid fa-heart-circle-check"></i> Health Score</h4>
+        <p class="value">82%</p>
+        <span class="trend up">▲ 6%</span>
+        <div class="progress" data-progress="82"></div>
+      </div>
+
+      <div class="card">
+        <h4><i class="fa-solid fa-apple-whole"></i> Diet Compliance</h4>
+        <p class="value">76%</p>
+        <span class="trend up">▲ 4%</span>
+        <div class="progress" data-progress="76"></div>
+      </div>
+
+      <div class="card">
+        <h4><i class="fa-solid fa-dumbbell"></i> Exercise Completion</h4>
+        <p class="value">68%</p>
+        <span class="trend down">▼ 3%</span>
+        <div class="progress" data-progress="68"></div>
+      </div>
+
+      <div class="card">
+        <h4><i class="fa-solid fa-calendar-check"></i> Appointments Attended</h4>
+        <p class="value">9</p>
+        <span class="trend up">▲ 1</span>
+        <div class="progress" data-progress="90"></div>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

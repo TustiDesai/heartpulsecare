@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hospital Management</title>
+  <link rel="stylesheet" href="hospital_management.css" />
+</head>
+
+<body>
+<div class="layout">
+
+  <!-- ===== SIDEBAR (EXACT DASHBOARD STYLE) ===== -->
+  <aside class="sidebar">
+    <div class="logo">❤️ HeartPulse</div>
+
+    <nav>
+      <a class="menu-item" href="dashboard.html">
+        <i>🏠</i><span>Dashboard</span>
+      </a>
+      <a class="menu-item active" href="#">
+        <i>🏥</i><span>Hospitals</span>
+      </a>
+      <a class="menu-item" href="appointment_management.html">
+        <i>📅</i><span>Appointments</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+  <div class="top-left">
+    <button class="toggle-btn">☰</button>
+    <h2>Hospital Management</h2>
+  </div>
+
+  <div class="bell">
+    🔔<span class="badge">2</span>
+  </div>
+</div>
+
+    <!-- ADD BUTTON -->
+    <button class="primary-btn" onclick="openForm()">+ Add Hospital</button>
+
+    <!-- TABLE -->
+    <table class="hospital-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Area</th>
+          <th>Emergency</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="hospitalTableBody"></tbody>
+    </table>
+    <h3 class="nearby-title">Nearby Hospitals</h3>
+    <div id="nearbyHospitals" class="nearby-list">
+        <p class="empty">Select a city to see nearby hospitals</p>
+    </div>
+  </main>
+</div>
+
+<!-- ===== ADD / EDIT MODAL ===== -->
+<div class="modal" id="hospitalModal">
+  <div class="modal-box">
+    <h3 id="modalTitle">Add Hospital</h3>
+
+    <input id="name" placeholder="Hospital Name" />
+    <input id="city" placeholder="City" />
+    <input id="area" placeholder="Area" />
+
+    <label class="checkbox">
+      <input type="checkbox" id="emergency" /> 24×7 Emergency
+    </label>
+
+    <div class="modal-actions">
+      <button class="action-btn accept" onclick="saveHospital()">Save</button>
+      <button class="action-btn reject" onclick="closeForm()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAP MODAL ===== -->
+<div class="modal" id="mapModal">
+  <div class="modal-box map-box">
+    <h3 id="mapTitle"></h3>
+
+    <div class="pin">📍</div>
+
+    <iframe id="mapFrame" loading="lazy"></iframe>
+
+    <h4>Nearby Hospitals</h4>
+    <ul id="nearbyList"></ul>
+
+    <button class="action-btn reject" onclick="closeMap()">Close</button>
+  </div>
+</div>
+
+<script src="hospital_management.js"></script>
+</body>
+</html>

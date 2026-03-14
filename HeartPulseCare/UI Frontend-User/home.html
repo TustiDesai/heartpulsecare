@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Home | HeartPulseCare</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      ❤️ <span>HeartPulseCare</span>
+    </div>
+
+    <nav>
+      <a class="menu-item active"><i class="fa fa-house"></i><span>Home</span></a>
+      <a class="menu-item" href="dashboard.html"><i class="fa fa-chart-line"></i><span>Dashboard</span></a>
+      <a class="menu-item"><i class="fa fa-apple-alt"></i><span>My Diet</span></a>
+      <a class="menu-item"><i class="fa fa-dumbbell"></i><span>My Exercise</span></a>
+      <a class="menu-item"><i class="fa fa-calendar-check"></i><span>Appointments</span></a>
+      <a class="menu-item"><i class="fa fa-hospital"></i><span>Hospitals</span></a>
+      <a class="menu-item"><i class="fa fa-question-circle"></i><span>Quiz</span></a>
+      <a class="menu-item"><i class="fa fa-comment-dots"></i><span>Feedback</span></a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <button class="toggle-btn" id="toggleBtn">☰</button>
+      <span class="welcome">Welcome, User</span>
+      <div class="auth-links">
+        <a href="login.html" class="auth-btn login">Login</a>
+        <a href="register.html" class="auth-btn register">Register</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Welcome to Your Heart Health Space ❤️</h1>
+      <p>Your daily progress, care, and recovery at one place.</p>
+    </section>
+
+    <!-- MOTIVATIONAL TIPS -->
+<section class="health-tip">
+  <span class="tip-emoji">❤️</span>
+  <p id="tipText">Taking care of your heart today builds a healthier tomorrow.</p>
+</section>
+
+    <!-- QUICK STATS -->
+    <section class="quick-stats">
+      <div class="stat-card">
+        <h4>Health Score</h4>
+        <p>82%</p>
+      </div>
+      <div class="stat-card">
+        <h4>Diet Compliance</h4>
+        <p>76%</p>
+      </div>
+      <div class="stat-card">
+        <h4>Exercise</h4>
+        <p>68%</p>
+      </div>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <section class="actions">
+      <div class="action-card">🥗 View Diet Plan</div>
+      <div class="action-card">🏃 Exercise Routine</div>
+      <div class="action-card">📅 Book Appointment</div>
+      <div class="action-card">📝 Take Health Quiz</div>
+    </section>
+
+  </main>
+</div>
+
+<script src="home.js"></script>
+</body>
+</html>

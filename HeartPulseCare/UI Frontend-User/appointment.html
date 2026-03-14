@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Book Appointment | HeartPulseCare</title>
+<link rel="stylesheet" href="appointment.css">
+
+<!-- icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>HeartPulseCare</span>
+</div>
+
+<div class="menu">
+
+<a href="home.html" class="menu-item">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+<a href="dashboard.html" class="menu-item">
+<i class="fa-solid fa-chart-line"></i>
+<span>Dashboard</span>
+</a>
+
+<a href="diet.html" class="menu-item">
+<i class="fa-solid fa-apple-whole"></i>
+<span>My Diet</span>
+</a>
+
+<a href="exercise.html" class="menu-item">
+<i class="fa-solid fa-dumbbell"></i>
+<span>My Exercise</span>
+</a>
+
+<a href="appointment.html" class="menu-item active">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+
+<a href="hospital.html" class="menu-item">
+<i class="fa-solid fa-hospital"></i>
+<span>Hospitals</span>
+</a>
+
+<a href="quiz.html" class="menu-item">
+<i class="fa-solid fa-file-circle-question"></i>
+<span>Quiz</span>
+</a>
+
+<a href="feedback.html" class="menu-item">
+<i class="fa-solid fa-comments"></i>
+<span>Feedback</span>
+</a>
+
+<a href="support.html" class="menu-item">
+<i class="fa-solid fa-gear"></i>
+<span>Support</span>
+</a>
+
+</div>
+</div>
+
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="topbar">
+
+<button id="toggleBtn" class="toggle-btn">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<h2>Book Appointment</h2>
+
+</div>
+
+
+<div class="appointment-container">
+
+<div class="form-card">
+<form action="http://127.0.0.1:5000/book_appointment" method="POST">
+
+<h3>Patient Details</h3>
+
+<input name="patient_name"  placeholder="Full Name" required>
+<input name="age"  placeholder="Age" required>
+<textarea name="address" placeholder="Address"></textarea>
+
+<h3>Select Hospital</h3>
+
+<select name="hospital">
+  <option>Zydus Hospital</option>
+  <option>Sterling Hospital</option>
+</select>
+
+<h3>Select Doctor</h3>
+
+<select name="doctor">
+<option>Dr Mehta</option>
+<option>Dr Shah</option>
+<option>Dr Patel</option>
+</select>
+
+<h3>Select Date</h3>
+
+<input type="date" name="date">
+
+<h3>Available Time Slots</h3>
+
+<div id="slots"></div>
+<input type="hidden" name="appointment_time" id="appointment_time">
+
+<button type="submit" class="book-btn">
+Book Appointment
+</button>
+
+
+</form>
+</div>
+
+
+<div class="history">
+
+<h3>Your Appointment History</h3>
+
+<div name="historyList"></div>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+<script src="appointment.js"></script>
+
+</body>
+</html>

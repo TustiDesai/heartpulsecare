@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Support & Feedback</title>
+
+<link rel="stylesheet" href="support.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>HeartPulseCare</span>
+</div>
+
+<a href="home.html" class="menu-item">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+<a href="dashboard.html" class="menu-item">
+<i class="fa-solid fa-chart-line"></i>
+<span>Dashboard</span>
+</a>
+
+<a href="diet.html" class="menu-item">
+<i class="fa-solid fa-apple-whole"></i>
+<span>My Diet</span>
+</a>
+
+<a href="exercise.html" class="menu-item">
+<i class="fa-solid fa-dumbbell"></i>
+<span>My Exercise</span>
+</a>
+
+<a href="appointment.html" class="menu-item">
+<i class="fa-solid fa-calendar-check"></i>
+<span>Appointments</span>
+</a>
+
+<a href="hospitals.html" class="menu-item">
+<i class="fa-solid fa-hospital"></i>
+<span>Hospitals</span>
+</a>
+
+<a href="quiz.html" class="menu-item">
+<i class="fa-solid fa-file-circle-question"></i>
+<span>Quiz</span>
+</a>
+
+<a href="feedback.html" class="menu-item">
+<i class="fa-solid fa-comments"></i>
+<span>Feedback</span>
+</a>
+
+<a href="support.html" class="menu-item active">
+<i class="fa-solid fa-headset"></i>
+<span>Support</span>
+</a>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="topbar">
+
+<button id="toggleBtn" class="toggle-btn">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<h2>Support & Feedback</h2>
+
+</div>
+
+
+<div class="support-container">
+
+<!-- SUPPORT INFO -->
+
+<div class="support-card">
+
+<h3>Customer Support</h3>
+
+<p><i class="fa-solid fa-envelope"></i> support@heartpulsecare.com</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+
+<p><i class="fa-solid fa-clock"></i> Mon - Sat (9 AM - 6 PM)</p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div class="support-card">
+
+<h3>Frequently Asked Questions</h3>
+
+<ul>
+
+<li>How to book an appointment?</li>
+
+<li>How to check heart health quiz results?</li>
+
+<li>How to update diet plans?</li>
+
+<li>How to find nearby hospitals?</li>
+
+</ul>
+
+</div>
+
+
+<!-- FEEDBACK FORM -->
+
+<div class="support-card feedback-card">
+
+<h3>Send Us Feedback</h3>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="email" id="email" placeholder="Your Email">
+
+<textarea id="message" placeholder="Write your message here..." rows="4"></textarea>
+
+<button onclick="submitFeedback()" class="submit-btn">
+
+Send Message
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="support.js"></script>
+
+</body>
+</html>

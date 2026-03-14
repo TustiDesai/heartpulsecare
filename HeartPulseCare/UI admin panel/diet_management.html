@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diet Plan Management</title>
+  <link rel="stylesheet" href="diet_management.css" />
+</head>
+
+<body>
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">❤️ HeartPulse</div>
+    <nav>
+      <a href="#">🏠 Dashboard</a>
+      <a href="#" class="active">🥗 Diet Plans</a>
+      <a href="#">🏥 Hospitals</a>
+      <a href="#">📅 Appointments</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <button class="toggle-btn" id="toggleBtn">☰</button>
+      <h1>Diet Plan Management</h1>
+    </div>
+
+    <!-- CATEGORY SELECT -->
+    <div class="controls">
+      <select id="categorySelect">
+        <option value="heartAttack">After Heart Attack</option>
+        <option value="angioplasty">After Angioplasty</option>
+      </select>
+      <button class="primary-btn" onclick="openModal()">➕ Add Diet</button>
+    </div>
+
+    <!-- DIET SECTIONS -->
+    <div id="dietSections"></div>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="dietModal">
+  <div class="modal-content animate">
+    <h2>Add / Update Diet</h2>
+
+    <select id="mealType">
+      <option value="breakfast">🍳 Breakfast</option>
+      <option value="lunch">🍱 Lunch</option>
+      <option value="snacks">☕ Snacks</option>
+      <option value="dinner">🍽 Dinner</option>
+    </select>
+
+    <input type="text" id="dietText" placeholder="Diet item (e.g. Oats with fruits)" />
+
+    <input type="hidden" id="editIndex" value="-1" />
+    <input type="hidden" id="editMeal" />
+
+    <div class="modal-actions">
+      <button class="primary-btn" id="saveBtn">Save</button>
+      <button class="secondary-btn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="diet_management.js"></script>
+</body>
+</html>

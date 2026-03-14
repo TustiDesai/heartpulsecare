@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin_dashboard.css" />
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">❤️ HeartPulseCare</div>
+
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>User Management</a>
+      <a>Appointments</a>
+      <a>Diet Management</a>
+      <a>Exercise Management</a>
+      <a>Quiz Results</a>
+      <a>Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <button id="toggleBtn">☰</button>
+      <h2>Admin Dashboard</h2>
+      <span class="admin">Welcome, Admin</span>
+    </header>
+
+    <!-- CARDS -->
+    <section class="cards">
+
+      <div class="card">
+        <h4>Total Users</h4>
+        <p class="value">248</p>
+        <span class="trend up">▲ 12%</span>
+        <div class="progress"><span style="--progress: 75%;"></span></div>
+      </div>
+
+      <div class="card">
+        <h4>Total Appointments</h4>
+        <p class="value">92</p>
+        <span class="trend down">▼ 5%</span>
+        <div class="progress"><span style="--progress: 45%;"></span></div>
+      </div>
+
+      <div class="card">
+        <h4>Active Patients</h4>
+        <p class="value">176</p>
+        <span class="trend down">▼ 10%</span>
+        <div class="progress"><span style="--progress: 60%;"></span></div>
+      </div>
+
+      <div class="card">
+        <h4>Doctors</h4>
+        <p class="value">6</p>
+        <span class="trend up">▲ 12%</span>
+        <div class="progress"><span style="--progress: 30%;"></span></div>
+      </div>
+
+      <div class="card">
+        <h4>Diet Compliance</h4>
+        <p class="value">72%</p>
+        <span class="trend up">▲ 8%</span>
+        <div class="progress"><span style="--progress: 72%;"></span></div>
+      </div>
+
+      <div class="card">
+        <h4>Exercise Completion</h4>
+        <p class="value">81%</p>
+        <span class="trend up">▲ 10%</span>
+        <div class="progress"><span style="--progress: 81%;"></span></div>
+      </div>
+
+      <section class="analytics-card">
+        <h3>Doctor-wise Appointments</h3>
+        <div class="chart-wrapper">
+          <canvas id="doctorChart"></canvas>
+        </div>
+        <div class="analytics-card calendar-card">
+  <h3>Appointment Calendar</h3>
+
+  <div class="calendar-header">
+    <button id="prevMonth">‹</button>
+    <span id="monthYear"></span>
+    <button id="nextMonth">›</button>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="day-name">Sun</div>
+    <div class="day-name">Mon</div>
+    <div class="day-name">Tue</div>
+    <div class="day-name">Wed</div>
+    <div class="day-name">Thu</div>
+    <div class="day-name">Fri</div>
+    <div class="day-name">Sat</div>
+  </div>
+
+  <div id="calendarDays" class="calendar-days"></div>
+</div>
+      </section>
+
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const doctorData = {
+  labels: ["Dr. Shah", "Dr. Mehta", "Dr. Patel", "Dr. Joshi"],
+  datasets: [{
+    label: "Appointments",
+    data: [32, 18, 24, 12],
+    borderWidth: 2
+  }]
+};
+
+new Chart(document.getElementById("doctorChart"), {
+  type: "bar",
+  data: doctorData,
+  options: {
+    responsive: true,
+    animation: {
+      duration: 800,
+      easing: "easeOutQuart"
+    }
+  }
+});
+</script>
+<script src="admin_dashboard.js"></script>
+</body>
+</html>

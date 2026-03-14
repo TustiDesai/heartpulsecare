@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback & Contact Messages</title>
+  <link rel="stylesheet" href="feedback_management.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR (EXACT SAME AS DASHBOARD) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2 class="logo">❤️ HeartCare</h2>
+    </div>
+
+    <ul class="menu">
+      <li><i class="fa fa-home"></i><span>Dashboard</span></li>
+      <li class="active"><i class="fa fa-envelope"></i><span>Feedback</span></li>
+      <li><i class="fa fa-users"></i><span>Users</span></li>
+      <li><i class="fa fa-calendar-check"></i><span>Appointments</span></li>
+      <li><i class="fa fa-right-from-bracket"></i><span>Logout</span></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <h1>Feedback & Contact Messages</h1>
+    </header>
+
+    <!-- MESSAGE LIST -->
+    <section class="messages-card animate">
+      <h2>📩 Received Messages</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="messageTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<!-- REPLY MODAL -->
+<div class="modal" id="replyModal">
+  <div class="modal-content animate">
+    <h3>✉️ Reply to Message</h3>
+    <textarea id="replyText" placeholder="Type your reply here..."></textarea>
+
+    <div class="modal-actions">
+      <button class="primary-btn" onclick="sendReply()">Send Reply</button>
+      <button class="secondary-btn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="feedback_management.js"></script>
+</body>
+</html>

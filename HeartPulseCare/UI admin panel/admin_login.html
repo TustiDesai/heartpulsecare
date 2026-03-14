@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login | Heart Pulse Care</title>
+  <link rel="stylesheet" href="admin_login.css" />
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="websitelogo.png" alt="Heart Pulse Care">
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login')">Login</button>
+        <button class="tab" onclick="switchTab('register')">Register</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form id="loginForm" class="form active">
+        <h2>Admin Login</h2>
+
+        <div class="input-group">
+          <input type="email" required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+
+        <button type="submit" class="primary-btn">Login</button>
+      </form>
+
+      <!-- REGISTER -->
+      <form id="registerForm" class="form">
+        <h2>Admin Register</h2>
+
+        <div class="input-group">
+          <input type="text" required />
+          <label>Full Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+
+        <button type="submit" class="primary-btn">Register</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div id="successModal" class="success-overlay">
+    <div class="success-box">
+      <svg class="checkmark" viewBox="0 0 52 52">
+        <circle class="checkmark-circle" cx="26" cy="26" r="25"/>
+        <path class="checkmark-check" d="M14 27 L22 35 L38 18"/>
+      </svg>
+      <h3>Success</h3>
+      <p>Operation completed successfully</p>
+    </div>
+  </div>
+
+<script src="admin_login.js"></script>
+</body>
+</html>

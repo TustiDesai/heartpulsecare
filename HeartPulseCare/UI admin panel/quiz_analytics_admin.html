@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Analytics | Admin</title>
+  <link rel="stylesheet" href="quiz_analytics_admin.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR (EXACT SAME AS DASHBOARD) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2 class="logo">❤️ HeartCare</h2>
+    </div>
+
+    <ul class="menu">
+      <li><i class="fa fa-home"></i><span>Dashboard</span></li>
+      <li class="active"><i class="fa fa-chart-bar"></i><span>Quiz Analytics</span></li>
+      <li><i class="fa fa-users"></i><span>User Management</span></li>
+      <li><i class="fa fa-utensils"></i><span>Diet Plans</span></li>
+      <li><i class="fa fa-right-from-bracket"></i><span>Logout</span></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <header class="topbar">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <h1>Quiz Result & Risk Analytics</h1>
+    </header>
+
+    <!-- ANALYTICS CARDS -->
+    <section class="cards">
+      <div class="card animate">
+        <h3>👥 Total Users</h3>
+        <p id="totalUsers">0</p>
+      </div>
+
+      <div class="card animate">
+        <h3>📊 Average Score</h3>
+        <p id="avgScore">0</p>
+      </div>
+
+      <div class="card low animate">
+        <h3>🟢 Low Risk</h3>
+        <p id="lowRisk">0</p>
+      </div>
+
+      <div class="card high animate">
+        <h3>🔴 High Risk</h3>
+        <p id="highRisk">0</p>
+      </div>
+    </section>
+
+    <!-- RESULT TABLE -->
+    <section class="table-section">
+      <h2>📝 Submitted Quiz Scores</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Score</th>
+            <th>Risk Level</th>
+          </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="quiz_analytics_admin.js"></script>
+</body>
+</html>

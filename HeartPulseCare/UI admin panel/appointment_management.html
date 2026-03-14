@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Management | Admin</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="appointment_management.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="heart">❤️</span>
+      <span class="brand-text">HeartPulseCare</span>
+      <button id="toggleBtn">☰</button>
+    </div>
+
+    <nav>
+      <a class="menu-item" href="admin_dashboard.html">
+        <i>🏠</i><span>Dashboard</span>
+      </a>
+      <a class="menu-item active" href="#">
+        <i>📅</i><span>Appointments</span>
+      </a>
+      <a class="menu-item" href="user_management.html">
+        <i>👥</i><span>Users</span>
+      </a>
+      <a class="menu-item">
+        <i>👨‍⚕️</i><span>Doctors</span>
+      </a>
+      <a class="menu-item">
+        <i>⚙️</i><span>Settings</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="topbar">
+      <h2>Appointment Management</h2>
+      <div class="notification">
+        🔔<span class="badge">3</span>
+      </div>
+    </div>
+
+    <div class="filters">
+      <select>
+        <option>Doctor</option>
+      </select>
+      <input type="date">
+      <input type="text" placeholder="Search Patient">
+    </div>
+
+    <table class="appointments">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amit Shah</td>
+          <td>Dr. Mehta</td>
+          <td>2026-01-29</td>
+          <td>10:30 AM</td>
+          <td><span class="status pending">Pending</span></td>
+          <td>
+            <button class="action-btn accept">Accept</button>
+            <button class="action-btn reject">Reject</button>
+            <button class="action-btn reschedule">Reschedule</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<!-- ===== RESCHEDULE MODAL ===== -->
+<div class="modal-overlay" id="rescheduleModal">
+  <div class="modal">
+    <h3>Reschedule Appointment</h3>
+
+    <label>New Date</label>
+    <input type="date" id="newDate" />
+
+    <label>New Time</label>
+    <input type="time" id="newTime" />
+
+    <div class="modal-actions">
+      <button class="btn cancel" id="closeModal">Cancel</button>
+      <button class="btn save" id="saveReschedule">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="appointment_management.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin | User Management</title>
+  <link rel="stylesheet" href="user_management.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <h2 class="logo">❤️ HeartPulseCare</h2>
+    <ul>
+      <li><i class="bx bxs-dashboard"></i> Dashboard</li>
+      <li class="active"><i class="bx bxs-user-detail"></i> Users</li>
+      <li><i class="bx bxs-calendar"></i> Appointments</li>
+      <li><i class="bx bxs-cog"></i> Settings</li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="topbar">
+      <i class="bx bx-menu" id="menuBtn"></i>
+      <h3>User Management</h3>
+    </header>
+
+    <!-- Cards -->
+    <section class="stats">
+      <div class="stat-card">
+        <i class="bx bxs-user"></i>
+        <h4>Total Users</h4>
+        <p>128</p>
+      </div>
+
+      <div class="stat-card">
+        <i class="bx bxs-user-check"></i>
+        <h4>Active</h4>
+        <p>112</p>
+      </div>
+
+      <div class="stat-card">
+        <i class="bx bxs-user-x"></i>
+        <h4>Deactivated</h4>
+        <p>16</p>
+      </div>
+    </section>
+
+    <!-- User Table -->
+    <section class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Rahul Shah</td>
+            <td>rahul@gmail.com</td>
+            <td><span class="status active">Active</span></td>
+            <td class="actions">
+              <button class="view"><i class="bx bx-show"></i></button>
+              <button class="edit"><i class="bx bx-edit"></i></button>
+              <button class="reset"><i class="bx bx-refresh"></i></button>
+              <button class="delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Anjali Mehta</td>
+            <td>anjali@gmail.com</td>
+            <td><span class="status inactive">Inactive</span></td>
+            <td class="actions">
+              <button class="view"><i class="bx bx-show"></i></button>
+              <button class="edit"><i class="bx bx-edit"></i></button>
+              <button class="reset"><i class="bx bx-refresh"></i></button>
+              <button class="delete"><i class="bx bx-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</div>
+
+<script src="user_management.js"></script>
+</body>
+</html>

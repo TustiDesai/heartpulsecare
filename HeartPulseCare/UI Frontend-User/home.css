@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6f8f7;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #0b6b6f, #0e8f8f);
+  color: #fff;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.brand {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.brand span {
+  margin-left: 8px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 14px 20px;
+  color: #e6f4f3;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(4px);
+}
+
+.menu-item.active {
+  background: rgba(255,255,255,0.25);
+}
+
+.sidebar.collapsed span {
+  display: none;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0b6b6f;
+}
+
+.welcome {
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.hero h1 {
+  color: #0b6b6f;
+  margin-bottom: 6px;
+}
+
+/* STATS */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card p {
+  font-size: 28px;
+  color: #0e8f8f;
+  margin-top: 6px;
+}
+
+/* ACTIONS */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 16px;
+}
+
+.action-card {
+  background: linear-gradient(135deg, #0e8f8f, #0b6b6f);
+  color: white;
+  padding: 22px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* MOTIVATIONAL TIP */
+.health-tip {
+  background: linear-gradient(135deg, #e6f4f3, #ffffff);
+  border-left: 6px solid #0e8f8f;
+  padding: 18px 22px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: slideFade 0.6s ease;
+}
+
+.tip-emoji {
+  font-size: 26px;
+  animation: pulse 2s infinite;
+}
+
+.health-tip p {
+  font-size: 15px;
+  color: #0b6b6f;
+  font-weight: 500;
+}
+
+/* GLOBAL MICRO ANIMATIONS */
+.hero,
+.health-tip,
+.stat-card,
+.action-card {
+  animation: fadeUp 0.6s ease;
+}
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+/* AUTH LINKS */
+.auth-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.auth-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* LOGIN */
+.auth-btn.login {
+  color: #0e8f8f;
+  border: 1.5px solid #0e8f8f;
+}
+
+.auth-btn.login:hover {
+  background: #e6f4f3;
+  transform: translateY(-2px);
+}
+
+/* REGISTER */
+.auth-btn.register {
+  background: #0e8f8f;
+  color: #fff;
+}
+
+.auth-btn.register:hover {
+  background: #0b6b6f;
+  transform: translateY(-2px);
+}
+
+/* FADE-IN ANIMATION */
+.auth-links {
+  animation: fadeUp 0.5s ease;
+}

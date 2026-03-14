@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Heart Health Result</title>
+
+<link rel="stylesheet" href="quiz_result.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>HeartPulseCare</span>
+</div>
+
+<a href="home.html" class="menu-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+
+<a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+
+<a href="diet.html" class="menu-item"><i class="fa-solid fa-apple-whole"></i><span>My Diet</span></a>
+
+<a href="exercise.html" class="menu-item"><i class="fa-solid fa-dumbbell"></i><span>My Exercise</span></a>
+
+<a href="appointment.html" class="menu-item"><i class="fa-solid fa-calendar-check"></i><span>Appointments</span></a>
+
+<a href="hospitals.html" class="menu-item"><i class="fa-solid fa-hospital"></i><span>Hospitals</span></a>
+
+<a href="quiz.html" class="menu-item active"><i class="fa-solid fa-file-circle-question"></i><span>Quiz</span></a>
+
+<a href="feedback.html" class="menu-item"><i class="fa-solid fa-comments"></i><span>Feedback</span></a>
+
+<a href="support.html" class="menu-item"><i class="fa-solid fa-gear"></i><span>Support</span></a>
+
+</div>
+
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="topbar">
+
+<button id="toggleBtn" class="toggle-btn">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<h2>Your Heart Health Result</h2>
+
+</div>
+
+
+<div class="result-container">
+
+<!-- SCORE CIRCLE -->
+
+<div class="score-circle">
+
+<svg width="200" height="200">
+
+<circle cx="100" cy="100" r="85" class="bg"></circle>
+
+<circle cx="100" cy="100" r="85" class="progress" id="progressCircle"></circle>
+
+</svg>
+
+<div class="score-text">
+
+<span id="scoreNumber">0</span>
+
+</div>
+
+</div>
+
+
+<!-- RESULT INFO -->
+
+<div class="result-info">
+
+<h2 id="riskLevel"></h2>
+
+<p id="resultMessage"></p>
+
+<div class="suggestions">
+
+<h3>Recommended Actions</h3>
+
+<ul>
+
+<li>Follow heart healthy diet</li>
+<li>Exercise at least 30 minutes daily</li>
+<li>Reduce sugar and fried foods</li>
+<li>Regular health checkups</li>
+
+</ul>
+
+</div>
+
+<div class="actions">
+
+<a href="diet.html" class="action-btn">View Diet Plan</a>
+
+<a href="exercise.html" class="action-btn">Exercise Plan</a>
+
+<a href="appointment.html" class="action-btn">Book Doctor</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="quiz_result.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f5f7f7;
+}
+
+/* LAYOUT */
+
+.layout{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:230px;
+background:linear-gradient(180deg,#3a8d8f,#2c7a7b);
+color:white;
+padding:20px;
+transition:0.3s;
+}
+
+.sidebar.collapsed{
+width:70px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:18px;
+margin-bottom:30px;
+font-weight:600;
+}
+
+.menu-item{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px;
+margin-bottom:10px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:0.25s;
+}
+
+.menu-item:hover{
+background:rgba(255,255,255,0.15);
+transform:translateX(5px);
+}
+
+.menu-item.active{
+background:rgba(255,255,255,0.25);
+}
+
+.sidebar.collapsed span{
+display:none;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:30px;
+animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1;}
+}
+
+/* TOPBAR */
+
+.topbar{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:25px;
+}
+
+.toggle-btn{
+background:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* MAP */
+
+.map-container iframe{
+width:100%;
+height:320px;
+border:none;
+border-radius:12px;
+margin-bottom:30px;
+animation:slideDown 0.5s ease;
+}
+
+@keyframes slideDown{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1;}
+}
+
+/* HOSPITAL CARDS */
+
+.hospital-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.hospital-card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+animation:fadeIn 0.6s;
+}
+
+.hospital-card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.hospital-card h3{
+color:#d45555;
+margin-bottom:10px;
+}
+
+/* EMERGENCY ALERT */
+
+.emergency-alert{
+margin-top:25px;
+padding:15px;
+background:#ffeaea;
+border-left:5px solid #ff5a5a;
+border-radius:8px;
+animation:fadeIn 0.7s;
+}

@@ -1,0 +1,115 @@
+body{
+margin:0;
+font-family:Segoe UI;
+background:#f4f7f7;
+}
+
+.layout{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:230px;
+background:linear-gradient(180deg,#3a8d8f,#2c7a7b);
+color:white;
+padding:20px;
+transition:0.3s;
+}
+
+.sidebar.collapsed{
+width:70px;
+}
+
+.logo{
+display:flex;
+gap:10px;
+margin-bottom:30px;
+font-weight:600;
+}
+
+.menu-item{
+display:flex;
+gap:12px;
+padding:12px;
+margin-bottom:10px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:0.25s;
+}
+
+.menu-item:hover{
+background:rgba(255,255,255,0.15);
+transform:translateX(5px);
+}
+
+.sidebar.collapsed span{
+display:none;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:40px;
+}
+
+/* SUPPORT GRID */
+
+.support-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:30px;
+animation:fadeIn 0.5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1;}
+}
+
+/* CARDS */
+
+.support-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.support-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* FORM */
+
+.feedback-card input,
+.feedback-card textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.submit-btn{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+background:#3a8d8f;
+color:white;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.submit-btn:hover{
+background:#2c7a7b;
+transform:scale(1.05);
+}
