@@ -1,5 +1,6 @@
 import mysql.connector
 
+try:
 db = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -8,3 +9,8 @@ db = mysql.connector.connect(
 )
 
 cursor = db.cursor(dictionary=True)
+
+except:
+db = None
+cursor = None
+print("Database not connected (running without local MySQL)") 
